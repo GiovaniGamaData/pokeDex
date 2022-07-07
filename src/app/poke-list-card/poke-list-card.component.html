@@ -1,1 +1,23 @@
-<p>poke-list-card works!</p>
+<mat-card class="pokemon-card" *ngFor="let pokemon of pokemons">
+  <div class="pokemon-card__container">
+    <section class="pokemon-card__sub-container">
+      <mat-card-header>
+        <mat-card-title class="pokemon-card__title">
+          Pokémon species #{{ pokemon.id }}
+        </mat-card-title>
+        <mat-card-subtitle>
+          Amount of pokémons {{ totalPokemons }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <img
+          mat-card-avatar
+          class="pokemon-card__image"
+          src="{{ pokemon.sprites.other.dream_world.front_default }}"
+          alt="image front"
+        />
+      </mat-card-content>
+    </section>
+    <section></section>
+  </div>
+</mat-card>
